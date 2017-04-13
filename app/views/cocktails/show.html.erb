@@ -2,7 +2,7 @@
   <div class="col-sm-8 col-sm-offset-2">
     <h1>Name: <%= @cocktail.name %></h1>
     <h2>Description: <% @cocktail.doses.each do |dose|%></h2>
-      <p><%= dose.description %></p>
+      <p><%= dose.description %> + <%= dose.ingredient.name %></p>
     <% end %>
 
     <%= link_to "Add a dose", cocktails_path(@cocktail)%>
