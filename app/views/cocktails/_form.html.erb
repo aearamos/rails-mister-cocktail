@@ -1,0 +1,13 @@
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.input :name %>
+  <br>
+  <%= f.submit "Add/Update", class: "btn btn-primary" %>
+  <% if @cocktail.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @cocktail.errors.full_messages.each do |message| %>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
