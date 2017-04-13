@@ -5,7 +5,7 @@
       <p><%= dose.description %> + <%= dose.ingredient.name %></p>
     <% end %>
 
-    <%= link_to "Add a dose", cocktails_path(@cocktail)%>
+    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail)%>
     <br>
     <%= link_to "See all", cocktails_path %>
   </div>
