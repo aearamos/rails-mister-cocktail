@@ -2,7 +2,7 @@
   <div class="col-sm-8 col-sm-offset-2">
     <%= simple_form_for [@cocktail, @dose] do |f| %>
       <%= f.input :description %>
-      <%= f.association :ingredient, error: "Igredient taken!", prompt: "Add a ingredient" %>
+      <%= f.association :ingredient, error: "Igredient taken!" %>
       <%= f.submit "Add a dose", class: "btn btn-primary" %>
     <% end %>
   </div>
