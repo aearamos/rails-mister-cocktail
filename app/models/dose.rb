@@ -4,6 +4,6 @@ class Dose < ApplicationRecord
   validates :description, presence: :true
   validates :cocktail, presence: :true
   validates :name, presence: :true
-  validates inclusion: { in: [:cocktail, :ingredient], uniqueness: :true}
+  # validates inclusion: { in: [:cocktail, :ingredient], uniqueness: :true}
 
 end
