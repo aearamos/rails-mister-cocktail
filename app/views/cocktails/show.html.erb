@@ -1,7 +1,11 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
     <h1>Name: <%= @cocktail.name %></h1>
-    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail)%>
+    <h2>Description: <% @cocktail.doses.each do |dose|%></h2>
+      <p><%= dose.description %></p>
+    <% end %>
+
+    <%= link_to "Add a dose", cocktails_path(@cocktail)%>
     <br>
     <%= link_to "See all", cocktails_path %>
   </div>
