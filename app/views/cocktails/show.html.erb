@@ -4,9 +4,17 @@
     <h2>Description: <% @cocktail.doses.each do |dose|%></h2>
       <p><%= dose.description %> + <%= dose.ingredient.name %></p>
     <% end %>
-
-    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail)%>
+     <br>
+     <br>
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+     <br>
+     <br>
+    <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
     <br>
-    <%= link_to "See all", cocktails_path %>
+    <br>
+    <%= link_to "See all", cocktails_path, class: "btn btn-success" %>
   </div>
 </div>
+
+
+
